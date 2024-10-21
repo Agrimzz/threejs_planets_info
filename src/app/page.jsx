@@ -4,6 +4,7 @@ import Jupiter from "@/components/Jupiter"
 import Mars from "@/components/Mars"
 import Mercury from "@/components/Mercury"
 import Saturn from "@/components/Saturn"
+import Uranus from "@/components/Uranus"
 import Venus from "@/components/Venus"
 import { planetsInfo } from "@/constants"
 import { OrbitControls } from "@react-three/drei"
@@ -47,7 +48,7 @@ export default function Home() {
       case 6:
         return <Saturn scale={0.018} position={[0, 0, 0]} />
       case 7:
-        return <Earth scale={10} position={[0, 0, 0]} />
+        return <Uranus scale={0.003} position={[0, 0, 0]} />
       case 8:
         return <Earth scale={10} position={[0, 0, 0]} />
       default:
