@@ -1,5 +1,6 @@
 "use client"
 import Earth from "@/components/Earth"
+import Mars from "@/components/Mars"
 import Mercury from "@/components/Mercury"
 import Venus from "@/components/Venus"
 import { planetsInfo } from "@/constants"
@@ -38,7 +39,7 @@ export default function Home() {
       case 3:
         return <Earth scale={10} position={[0, 0, 0]} />
       case 4:
-        return <Earth scale={10} position={[0, 0, 0]} />
+        return <Mars scale={0.2} position={[0, 0, 0]} />
       case 5:
         return <Earth scale={10} position={[0, 0, 0]} />
       case 6:
