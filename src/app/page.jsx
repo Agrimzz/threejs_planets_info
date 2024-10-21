@@ -37,11 +37,11 @@ export default function Home() {
   const renderPlanetModel = () => {
     switch (activePlanetId) {
       case 1:
-        return <Mercury scale={0.12} position={[0, 0, 0]} />
+        return <Mercury scale={0.1} position={[0, 0, 0]} />
       case 2:
-        return <Venus scale={0.003} position={[0, 0, 0]} />
+        return <Venus scale={0.0026} position={[0, 0, 0]} />
       case 3:
-        return <Earth scale={10} position={[0, 0, 0]} />
+        return <Earth scale={8.5} position={[0, 0, 0]} />
       case 4:
         return <Mars scale={0.2} position={[0, 0, 0]} />
       case 5:
@@ -51,7 +51,7 @@ export default function Home() {
       case 7:
         return <Uranus scale={0.003} position={[0, 0, 0]} />
       case 8:
-        return <Neptune scale={0.16} position={[0, 0, 0]} />
+        return <Neptune scale={0.17} position={[0, 0, 0]} />
       default:
         return null
     }
