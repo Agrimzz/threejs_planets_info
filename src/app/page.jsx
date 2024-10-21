@@ -11,10 +11,30 @@ import { planetsInfo } from "@/constants"
 import { OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import Image from "next/image"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 export default function Home() {
   const [activePlanetId, setActivePlanetId] = useState(3)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 4000)
+    return () => clearTimeout(timer)
+  })
+
+  if (isLoading) {
+    return (
+      <div className="flex flex-col justify-center items-center h-screen w-full bg-black gap-8">
+        <p className="text-white text-3xl animate-bounce">
+          Planets Info using 3JS by Agrim Pradhananga
+        </p>
+        <div className="text-xl text-gray-300 animate-pulse">Loading...</div>
+      </div>
+    )
+  }
+
   const planetsCount = 8
   const planet = planetsInfo.find((p) => p.id === activePlanetId)
 
