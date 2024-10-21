@@ -3,6 +3,7 @@ import Earth from "@/components/Earth"
 import Jupiter from "@/components/Jupiter"
 import Mars from "@/components/Mars"
 import Mercury from "@/components/Mercury"
+import Neptune from "@/components/Neptune"
 import Saturn from "@/components/Saturn"
 import Uranus from "@/components/Uranus"
 import Venus from "@/components/Venus"
@@ -50,7 +51,7 @@ export default function Home() {
       case 7:
         return <Uranus scale={0.003} position={[0, 0, 0]} />
       case 8:
-        return <Earth scale={10} position={[0, 0, 0]} />
+        return <Neptune scale={0.16} position={[0, 0, 0]} />
       default:
         return null
     }
@@ -69,7 +70,6 @@ export default function Home() {
         <Canvas className="w-full h-full">
           <perspectiveCamera makeDefault position={[0, 0, 20]} />
           <ambientLight intensity={1} />
-          <directionalLight position={[10, 10, 10]} intensity={1} />
           <OrbitControls
             enableZoom={false}
             // maxPolarAngle={Math.PI / 2}
