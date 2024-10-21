@@ -20,7 +20,7 @@ const Mercury = (props) => {
       y: "+=6.28319",
       repeat: -1,
       ease: "linear",
-      duration: 60,
+      duration: 100,
     })
   })
   return (

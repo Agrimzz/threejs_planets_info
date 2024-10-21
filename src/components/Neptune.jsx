@@ -21,7 +21,7 @@ const Neptune = (props) => {
       y: "+=6.28319",
       repeat: -1,
       ease: "linear",
-      duration: 60,
+      duration: 50,
     })
   })
   return (

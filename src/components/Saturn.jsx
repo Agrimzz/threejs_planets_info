@@ -19,7 +19,7 @@ const Saturn = (props) => {
       y: "+=6.28319",
       repeat: -1,
       ease: "linear",
-      duration: 60,
+      duration: 40,
     })
   })
   return (

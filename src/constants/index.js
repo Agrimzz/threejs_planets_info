@@ -17,6 +17,9 @@ export const planetsInfo = [
     facts: [
       "Smallest planet in the Solar System",
       "Has no atmosphere to retain heat",
+      "Closest planet to the Sun",
+      "Orbits the Sun faster than any other planet",
+      "Its surface is covered in craters similar to the Moon",
     ],
   },
   {
@@ -37,6 +40,9 @@ export const planetsInfo = [
     facts: [
       "Hottest planet in the Solar System due to a thick atmosphere",
       "Rotates in the opposite direction to most planets",
+      "Similar in size and structure to Earth",
+      "Its surface is covered by clouds of sulfuric acid",
+      "A day on Venus is longer than a year on Venus",
     ],
   },
   {
@@ -57,6 +63,9 @@ export const planetsInfo = [
     facts: [
       "Only planet known to support life",
       "70% of its surface is covered by water",
+      "Has a magnetic field that protects it from solar radiation",
+      "The only planet with plate tectonics",
+      "The Moon causes tides on Earth",
     ],
   },
   {
@@ -77,6 +86,9 @@ export const planetsInfo = [
     facts: [
       "Known as the 'Red Planet' due to iron oxide on its surface",
       "Has the largest volcano in the Solar System, Olympus Mons",
+      "Mars has two moons: Phobos and Deimos",
+      "There are signs of liquid water on Mars' surface",
+      "Mars experiences giant dust storms that can cover the planet",
     ],
   },
   {
@@ -97,6 +109,9 @@ export const planetsInfo = [
     facts: [
       "Largest planet in the Solar System",
       "Has a Great Red Spot, a giant storm larger than Earth",
+      "Has 79 known moons, including Ganymede, the largest moon in the Solar System",
+      "Jupiter has a faint ring system",
+      "Its rapid rotation causes it to have a flattened shape at the poles",
     ],
   },
   {
@@ -117,6 +132,9 @@ export const planetsInfo = [
     facts: [
       "Famous for its stunning ring system",
       "Has more than 80 moons, including Titan, which has a thick atmosphere",
+      "Its rings are made of ice and rock particles",
+      "Saturn is the least dense planet in the Solar System; it would float in water",
+      "Saturn’s moon Enceladus has geysers that spew water into space",
     ],
   },
   {
@@ -137,6 +155,9 @@ export const planetsInfo = [
     facts: [
       "Rotates on its side, making its axis almost parallel to the Sun",
       "Has a faint ring system and 27 known moons",
+      "It is often referred to as an 'Ice Giant' due to its icy composition",
+      "Uranus' atmosphere contains methane, which gives it a blue-green color",
+      "It takes Uranus 84 years to complete one orbit around the Sun",
     ],
   },
   {
@@ -157,6 +178,9 @@ export const planetsInfo = [
     facts: [
       "Has the fastest winds in the Solar System, reaching 2,100 km/h",
       "Its moon Triton has geysers that erupt nitrogen",
+      "Neptune has 14 known moons",
+      "Its atmosphere contains visible storm systems",
+      "Neptune was the first planet predicted by mathematical calculations before being observed",
     ],
   },
 ]
