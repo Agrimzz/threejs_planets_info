@@ -1,6 +1,7 @@
 "use client"
 import Earth from "@/components/Earth"
 import Mercury from "@/components/Mercury"
+import Venus from "@/components/Venus"
 import { planetsInfo } from "@/constants"
 import { OrbitControls } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
@@ -33,7 +34,7 @@ export default function Home() {
       case 1:
         return <Mercury scale={0.12} position={[0, 0, 0]} />
       case 2:
-        return <Earth scale={10} position={[0, 0, 0]} />
+        return <Venus scale={0.003} position={[0, 0, 0]} />
       case 3:
         return <Earth scale={10} position={[0, 0, 0]} />
       case 4:
