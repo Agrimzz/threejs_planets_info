@@ -8,14 +8,36 @@ import Saturn from "@/components/Saturn"
 import Uranus from "@/components/Uranus"
 import Venus from "@/components/Venus"
 import { planetsInfo } from "@/constants"
-import { OrbitControls } from "@react-three/drei"
+import { OrbitControls, Stars } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import Image from "next/image"
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 
 export default function Home() {
   const [activePlanetId, setActivePlanetId] = useState(3)
   const [isLoading, setIsLoading] = useState(true)
+
+  const starsRef = useRef()
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const { clientX, clientY } = event
+      const x = (clientX / window.innerWidth) * 2 - 1
+      const y = -(clientY / window.innerHeight) * 2 + 1
+      setMousePosition({ x, y })
+    }
+
+    window.addEventListener("mousemove", handleMouseMove)
+    return () => window.removeEventListener("mousemove", handleMouseMove)
+  }, [])
+
+  useEffect(() => {
+    if (starsRef.current) {
+      starsRef.current.rotation.x = mousePosition.y * 0.1
+      starsRef.current.rotation.y = mousePosition.x * 0.1
+    }
+  }, [mousePosition])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -96,6 +118,17 @@ export default function Home() {
             enablePan={false}
           />
           {renderPlanetModel()}
+          <group ref={starsRef}>
+            <Stars
+              radius={100}
+              depth={50}
+              count={5000}
+              factor={4}
+              saturation={0}
+              fade
+              speed={1}
+            />
+          </group>
         </Canvas>
       </div>
       <div className="absolute right-20 top-72  bg-gray-800/60 p-4 rounded-xl grid grid-cols-2 gap-8">
